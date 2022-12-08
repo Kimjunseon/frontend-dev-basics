@@ -14,12 +14,59 @@ body {
 	border: 1px solid #666;
 	width: 300px;
 	background-color: #FFC;
+	cursor: pointer;
+	
+	padding-top: 10px;
+	padding-right: 20px;
+	padding-bottom: 30px;
+	padding-left: 40px;
+	
+	padding: 10px 20px 30px 40px; /* T R B L */
+	padding: 10px 20px 30px; /* T (R, L) B */
+	padding: 10px 20px; /* (T, B) (R, L) */
+	padding: 10px; /* (T, B, R, L) */
+	
+	margine-top: 10px;
+	margine-right: 20px;
+	margine-bottom: 30px;
+	margine-left: 40px;
+	
+	margine: 10px 20px 30px 40px; /* T R B L */
+	margine: 10px 20px 30px; /* T (R, L) B */
+	margine: 10px 20px; /* (T, B) (R, L) */
+	margine: 10px; /* (T, B, R, L) */
+	
+	/* center align */
+	margin-left: auto;
+	margin-right: auto;
+	
+	/* 예제 */
+	margin-top: 200px;
 }
 </style>
-</head>
+<script>
+/* function click() {
+	console.log("click");	
+} 
+마우스 클릭
 
+*/ 
+
+/*function over() {
+	console.log("mouse over");
+	마우스 오버
+	onmouseover='over()' <div>에 추가
+	*/
+	
+function onClick() {
+	elDiv = document.getElementById("my-div");
+	console.log(elDiv);
+	elDiv.style.backgroundColor = "#f00";
+}
+</script>
+</head>
 <body>
-	<div class="box1">
+	<div id="my-div" class='box1' onclick='onClick()'> 
 		CSS에서 가장 보편적이고 많이 사용하는 마진과 패딩에 대한 값이 어떻게 적용되는지 확인해 보겠습니다.
 	</div>
 </body>
