@@ -58,8 +58,15 @@ body {
 </style>
 
 <script>
+llSelected = null;
+
 function onTabClicked(li) {
+	if(llSelected != null){
+		llSelected.className = "";
+	}
+	
 	li.className = "selected";
+	llSelected = li;
 }
 </script>
 </head>
