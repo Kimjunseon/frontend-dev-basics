@@ -1,0 +1,5 @@
+[JS]
+플러그인 설치
+eslint
+JavaScript (ES6) code snippets
+Open Folder Context Menus for VS Code
