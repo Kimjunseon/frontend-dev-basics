@@ -79,3 +79,9 @@ console.log(f1(2, 3), f2(5, 4), f3(9, 5));
 console.log("f1: " + typeof(f1) + ":" + (f1 instanceof(Function)));
 console.log("f2: " + typeof(f2) + ":" + (f2 instanceof(Function)));
 console.log("f3: " + typeof(f3) + ":" + (f3 instanceof(Function)));
+
+// 원시타입에 메소드가 호출될 때...
+// 임시 wapper 객체가 만들어져서 메소드 호출이 일어난 뒤 사라진다.: 유사객체
+console.log("\n===== 원시 타입도 메소드 호출이 가능하다. =====")
+console.log(b.valueOf());
+console.log(b2.valueOf());
