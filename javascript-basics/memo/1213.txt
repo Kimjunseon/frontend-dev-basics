@@ -3,6 +3,7 @@
 eslint
 JavaScript (ES6) code snippets
 Open Folder Context Menus for VS Code
+자바스크립트 완벽가이드 코뿔소
 ======================================
 정리완료
 new class
