@@ -7,6 +7,9 @@
 - boolean
 
 */
+
+var u;
+
 i = 10;
 s = "Hello World";
 b = true;
