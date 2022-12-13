@@ -4,6 +4,10 @@ eslint
 JavaScript (ES6) code snippets
 Open Folder Context Menus for VS Code
 ======================================
+정리완료
+new class
+
 용어정리
 servlet??
 context??
+리터널??
