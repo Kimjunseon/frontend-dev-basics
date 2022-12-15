@@ -3,6 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
+/*
+현재 작동한 이벤트가 다른 곳에도 이벤트 영향을 미침 
+*/
+window.addEventListener('load', function(){
+	
+	document
+		.getElementById("outer-div")
+		.addEventListener('click', function(){
+			event.stopPropagation();
+			console.log('outer-div clicked');	
+	});
+	
+	document
+		.getElementById("inner-div")
+		.addEventListener('click', function(){
+			event.stopPropagation();
+			console.log('inner-div clicked');
+	});
+	
+	document
+	.getElementById("header")
+	.addEventListener('click', function(){
+		console.log('header clicked');
+	});
+	
+	document
+	.getElementById("text")
+	.addEventListener('click', function(){
+		console.log('text clicked');
+	});
+	
+})
+
+</script>
 </head>
 <body>
 	<h1>DOM(Document Object Model)</h1>
