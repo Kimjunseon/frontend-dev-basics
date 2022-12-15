@@ -1,1 +1,3 @@
 [JS]
+pure javascript
+vanila scrpit
