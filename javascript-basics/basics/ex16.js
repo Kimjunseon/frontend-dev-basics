@@ -63,12 +63,39 @@ var sum = function() {
     // Error
     // arguments의 __proto__는 object prototype에 chain이 되어 있기 때문에 오류!
     // 즉 for each 구문이 되지가 않는다.
+    
+    Array.prototype.forEach.call(arguments, function(e) {
+        s += e;
+    })
+    
 
     return s;
 }
 
-// console.log(sum(1));
-// console.log(sum(1, 2));
-// console.log(sum(1, 2, 3));
+console.log(sum(1));
+console.log(sum(1, 2));
+console.log(sum(1, 2, 3));
 console.log(sum(1, 2, 3, 4));
-// console.log(sum(1, 2, 3, 4, 5, 6));
+console.log(sum(1, 2, 3, 4, 5, 6));
+
+var myObject ={
+    v: "t",
+    f: function() {
+        console.log(this.v);
+    },
+
+    f1: function(greeting) {
+        console.log(greeting + " " +this.v);
+    }
+}
+var yourObject ={
+    v: "dr"
+}
+
+myObject.f.apply(yourObject); // this를 하고 호출까지 함, 파라미터가 없을 때
+myObject.f1.call(yourObject, "hi"); // this를 하고 호출까지 함, 파라미터가 있을 때
+
+// var f1 = function(){
+//     console.log(this.v);
+// }.bind(yourObject); // this를 하고 호출은 안함
+// f1(); // 호출
