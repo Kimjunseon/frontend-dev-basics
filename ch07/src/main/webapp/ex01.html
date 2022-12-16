@@ -2,26 +2,32 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<!-- 압축버젼(애플리케이션 서버 호스팅): compressed, production -->
-<!-- script src='jquery/jquery-3.6.0.min.js'></script-->
-
-<!-- 압축버젼(CDN): compressed, production -->
-<!-- script src='https://code.jquery.com/jquery-3.6.0.min.js'></script-->
-
-<!-- 소스버젼(CDN): uncompressed, development -->
-<script src='https://code.jquery.com/jquery-3.6.0.js'></script>
+<script type="text/javascript" src="jquery/jquery-3.6.0.js"></script>
 <script>
-// 버젼 확인
-// $는 jQuery 함수의 alias
-console.log(jQuery().jquery, $().jquery);
+//jQuery는 DOM 엘리먼트를 선택하는 작업을 보통 먼저 하기 때문에
+//DOM 로딩이 완료된 후에 작업들을 코드로 작성한다.
 
-// jQuery Object
-var $obj = jQuery();
-console.log(typeof(jQuery), typeof($obj), $obj instanceof Array, $obj instanceof Object);
+//1. DOM이 완료된 시점: DOM API 사용
+window.addEventListener("load", function(){
+	var $obj = $("#header");
+	console.log($obj.length);
+});
+
+//2. DOM이 완료된 시점: jQuery를 사용하는 방법1
+$(document).ready(function(){
+	var $obj = $("#header");
+	console.log($obj.length);
+});
+
+//3. DOM이 완료된 시점: jQuery를 사용하는 방법2: 추천
+$(function(){
+	var $obj = $("#header");
+	console.log($obj.length);
+});
+
 </script>
 </head>
 <body>
-	<h1>jQuery 로딩</h1>
+	<h1 id="header">jQuery 함수로 HTMLElement를 선택하는 시점</h1>
 </body>
 </html>
- 
