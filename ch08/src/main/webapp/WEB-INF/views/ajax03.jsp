@@ -11,7 +11,7 @@
 <script>
 $(function(){
 	var formData = {
-		name: "안대혁",
+		name: "김준선",
 		email: "kickscar@gmail.com",
 		password: "1234",
 		gender: "male"
@@ -21,7 +21,7 @@ $(function(){
 		$.ajax({
 			url: "${pageContext.request.contextPath }/api/03",
 			async: true,
-			type: "post",
+			type: "POST",
 			dataType: "json",
 			contentType: "application/json",
 			data: JSON.stringify(formData),

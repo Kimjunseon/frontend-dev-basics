@@ -39,11 +39,11 @@ $(function(){
 		});
 	});
 });
+
 </script>
 </head>
 <body>
 	<h1>Ajax Test02</h1>
-	
 	<button id="btn-getdata">데이터 보내기</button>
 	<div id="data"></div>
 </body>

@@ -1,6 +1,5 @@
 package ch08.vo;
 
-
 public class UserVo {
 	private Long no;
 	private String name;
